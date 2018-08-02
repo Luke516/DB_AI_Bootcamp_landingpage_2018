@@ -1,4 +1,4 @@
-(function($) {
+$( document ).ready((function($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
@@ -20,6 +20,48 @@
     $('.navbar-collapse').collapse('hide');
   });
 
+  /*$(function(){
+    $('.explore').click(function() {
+      var cls = $(this).closest("section").next().offset().top;
+      alert(cls);
+  		$("html, body").animate({scrollTop: cls}, "slow");
+    });
+  });*/
+
+  var pagePositon = 0,
+    sectionsSeclector = 'section',
+    $scrollItems = $(sectionsSeclector),
+    offsetTolorence = 30,
+    pageMaxPosition = $scrollItems.length - 1;
+
+//Map the sections:
+$scrollItems.each(function(index,ele) { $(ele).attr("debog",index).data("pos",index); });
+
+// Bind to scroll
+$(window).bind('scroll',upPos);
+
+//Move on click:
+$('.explore').click(function(e){
+    if (pagePositon+1 <= pageMaxPosition) {
+        pagePositon++;
+        $('html, body').stop().animate({
+              scrollTop: $scrollItems.eq(pagePositon).offset().top
+        }, 300);
+    }
+});
+
+//Update position func:
+function upPos(){
+   var fromTop = $(this).scrollTop();
+   var $cur = null;
+    $scrollItems.each(function(index,ele){
+        if ($(ele).offset().top < fromTop + offsetTolorence) $cur = $(ele);
+    });
+   if ($cur != null && pagePositon != $cur.data('pos')) {
+       pagePositon = $cur.data('pos');
+   }
+}
+
   // Activate scrollspy to add active class to navbar items on scroll
   $('body').scrollspy({
     target: '#mainNav',
@@ -39,4 +81,4 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-})(jQuery); // End of use strict
+})(jQuery)); // End of use strict
