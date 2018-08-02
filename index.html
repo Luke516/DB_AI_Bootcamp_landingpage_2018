@@ -21,6 +21,7 @@
 
     <link href="css/bootcamp.css" rel="stylesheet">
     <link href="css/timeline.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
 	<link rel="shortcut icon" href="img/nthu.png" />
 
@@ -84,28 +85,28 @@
               <div class="row">
                 <div class="col-lg-3">
                   <div class="feature-item">
-                    <i class="fa fa-database"></i>
+                    <i class="wow fadeInDown fa fa-database"></i>
                     <h3>深入資料庫架構</h3>
                     <p class="text-muted">不同於一般大學的資料庫課程，深入介紹 DBMS 的內部運作原理。</p>
                   </div>
                 </div>
                 <div class="col-lg-3">
                   <div class="feature-item">
-                    <i class="fa fa-file-code"></i>
+                    <i class="wow fadeInDown fa fa-file-code"></i>
                     <h3>開源程式碼實作</h3>
                     <p class="text-muted">配合 Open Source 資料庫系統<a href="http://www.vanilladb.org/">Vanilla DB</a>，實際練習所習得的知識。</p>
                   </div>
                 </div>
                 <div class="col-lg-3">
                   <div class="feature-item">
-                    <i class="fa fa-robot"></i>
+                    <i class="wow fadeInDown fa fa-robot"></i>
                     <h3>結合AI技術</h3>
                     <p class="text-muted">搭上近期 AI 的熱潮，重新思考如何將最新的技術結合進 DBMS 的架構中。</p>
                   </div>
                 </div>
                 <div class="col-lg-3">
                   <div class="feature-item">
-                    <i class="fa fa-book"></i>
+                    <i class="wow fadeInDown fa fa-book"></i>
                     <h3>為研究做準備</h3>
                     <p class="text-muted">給予學生精實的訓練，在課程結束後即可開始進行 DBMS 相關研究。</p>
                   </div>
@@ -118,7 +119,7 @@
     </section>
 
 	<section class="info bg-primary" id="info">
-
+    <div class="wow bounceInLeft container">
 		<div class="section-heading text-center">
           <h2>課程資訊</h2>
           <hr>
@@ -126,7 +127,8 @@
     <p>舉辦地點：待訂</p>
     <p>舉辦時間：8/27~8/31</p><br/>
     <p>課程表</p>
-	  <img class="col-md-8" src="img/schedule.png" alt="課表">
+	  <img class="col-md-12" src="img/schedule.png" alt="課表">
+  </div>
     </section>
 
     <section class="schedule text-center" id="schedule">
@@ -135,7 +137,7 @@
           <h2>重要時程</h2>
           <hr>
         </div>
-  	  <div class="row">
+  	  <div class="row wow tada">
   				<div style="display:inline-block;width:100%;">
   				<ul class="timeline timeline-horizontal">
   					<li class="timeline-item">
@@ -185,7 +187,7 @@
 		<h2>講者介紹</h2>
 		<hr>
 	</div>
-	<div class="row d-flex justify-content-center">
+	<div class="row d-flex justify-content-center wow fadeIn">
 		<div class="col-md-3 card" >
 		  <img class="card-img-top" src="img/SLMT.jpg" alt="Card image cap">
 		  <div class="card-body">
@@ -238,13 +240,14 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
     <!-- Custom scripts for this template -->
-    <script src="js/new-age.min.js"></script>
-
+    <script src="js/bootcamp.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 
 </html>
