@@ -115,6 +115,7 @@
   right: auto;
 }
 .timeline-horizontal {
+  overflow-x: auto;
   list-style: none;
   position: relative;
   padding: 20px 0px 20px 0px;
@@ -126,6 +127,7 @@
   bottom: 26px;
   left: 56px;
   right: 0;
+  min-width: 800px;
   width: 100%;
   margin-bottom: 20px;
 }
