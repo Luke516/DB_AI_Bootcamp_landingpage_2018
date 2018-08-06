@@ -119,6 +119,7 @@
   list-style: none;
   position: relative;
   padding: 20px 0px 20px 0px;
+  margin: auto;
   display: inline-block;
 }
 .timeline-horizontal:before {
