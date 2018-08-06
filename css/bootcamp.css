@@ -332,6 +332,10 @@ section.info h2 {
   margin-bottom: 25px;
 }
 
+section.schedule {
+  margin: auto;
+}
+
 section.contact h2 i {
   color: #dd4b39;
 }
