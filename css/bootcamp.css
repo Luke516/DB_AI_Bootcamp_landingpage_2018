@@ -407,14 +407,20 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
   margin-top: 10px;
 }
 
+.card-body {
+  color: black;
+}
+
 .bg-secondary {
       background-image: url("../img/shattered.png");
 }
 
 .bg-primary {
-  background: #acd6ff;
+  /*background: #acd6ff;
   background: -webkit-linear-gradient(#acd6ff, #1f9eba);
-  background: linear-gradient(#acd6ff, #1f9eba);
+  background: linear-gradient(#acd6ff, #1f9eba);*/
+  background-image: url("../img/shattered-island.gif");
+  color: white;
 }
 
 .text-primary {
